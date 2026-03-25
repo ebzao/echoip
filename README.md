@@ -1,54 +1,54 @@
 # echoip
 
-[![ci](https://github.com/mpolden/echoip/actions/workflows/ci.yml/badge.svg)](https://github.com/mpolden/echoip/actions/workflows/ci.yml)
+[![ci](https://github.com/ebzao/echoip/actions/workflows/ci.yml/badge.svg)](https://github.com/ebzao/echoip/actions/workflows/ci.yml)
 
 A simple service for looking up your IP address. This is the code that powers
-https://ifconfig.co.
+https://ifconfig.nautile.tech.
 
 ## Usage
 
 Just the business, please:
 
 ```
-$ curl ifconfig.co
+$ curl ifconfig.nautile.tech
 127.0.0.1
 
-$ http ifconfig.co
+$ http ifconfig.nautile.tech
 127.0.0.1
 
-$ wget -qO- ifconfig.co
+$ wget -qO- ifconfig.nautile.tech
 127.0.0.1
 
-$ fetch -qo- https://ifconfig.co
+$ fetch -qo- https://ifconfig.nautile.tech
 127.0.0.1
 
-$ bat -print=b ifconfig.co/ip
+$ bat -print=b ifconfig.nautile.tech/ip
 127.0.0.1
 ```
 
 Country and city lookup:
 
 ```
-$ curl ifconfig.co/country
+$ curl ifconfig.nautile.tech/country
 Elbonia
 
-$ curl ifconfig.co/country-iso
+$ curl ifconfig.nautile.tech/country-iso
 EB
 
-$ curl ifconfig.co/city
+$ curl ifconfig.nautile.tech/city
 Bornyasherk
 
-$ curl ifconfig.co/asn
+$ curl ifconfig.nautile.tech/asn
 AS31337
 
-$ curl ifconfig.co/asn-org
+$ curl ifconfig.nautile.tech/asn-org
 Dilbert Technologies
 ```
 
 As JSON:
 
 ```
-$ curl -H 'Accept: application/json' ifconfig.co  # or curl ifconfig.co/json
+$ curl -H 'Accept: application/json' ifconfig.nautile.tech  # or curl ifconfig.nautile.tech/json
 {
   "city": "Bornyasherk",
   "country": "Elbonia",
@@ -63,7 +63,7 @@ $ curl -H 'Accept: application/json' ifconfig.co  # or curl ifconfig.co/json
 Port testing:
 
 ```
-$ curl ifconfig.co/port/80
+$ curl ifconfig.nautile.tech/port/80
 {
   "ip": "127.0.0.1",
   "port": 80,
@@ -98,7 +98,7 @@ between IPv4 and IPv6 lookup.
 Compiling requires the [Golang compiler](https://golang.org/) to be installed.
 This package can be installed with:
 
-`go install github.com/mpolden/echoip/...@latest`
+`go install github.com/ebzao/echoip/...@latest`
 
 For more information on building a Go project, see the [official Go
 documentation](https://golang.org/doc/code.html).
@@ -106,9 +106,9 @@ documentation](https://golang.org/doc/code.html).
 ## Docker image
 
 A Docker image is available on [Docker
-Hub](https://hub.docker.com/r/mpolden/echoip), which can be downloaded with:
+Hub](https://hub.docker.com/r/ebzao/echoip), which can be downloaded with:
 
-`docker pull mpolden/echoip`
+`docker pull ebzao/echoip`
 
 ## Geolocation data
 
